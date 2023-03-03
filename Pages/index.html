@@ -11,23 +11,38 @@
     <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="..../Assets/CSS/style.css" />
+    <link rel="stylesheet" href="../Assets/CSS/style.css" />
 
     <title>Ananas - DiscoverYOU</title>
 </head>
 
 <body>
+    <!-- Card -->
+    <button type="button" class="btn-cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> 0
+        <img src="../Assets/Images/box5.svg" alt="">
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="199999" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-body">
+            <h1>GIỎ HÀNG (0)</h1>
+            <hr>
+            <p>Tổng Cộng:   <span>0đ</span></p> 
+            <button class="btn-pay">THANH TOÁN</button>
+            <button class="btn-love">THÊM VÀO YÊU THÍCH</button>
+        </div>
+    </div>
+
+    <!-- Header -->
     <header>
         <div class="toolbar">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xl-12">
                         <ul>
-                            <li><a href=""><img src="..../Assets/Images/box5.svg" />Giỏ hàng (0)</a></li>
-                            <li><a href=""><img src="..../Assets/Images/box4.svg" />Đăng nhâp</a></li>
-                            <li><a href=""><img src="..../Assets/Images/box3.svg" />Yêu thích</a></li>
-                            <li><a href=""><img src="..../Assets/Images/box2.svg" />Tìm cửa hàng</a></li>
-                            <li><a href=""><img src="..../Assets/Images/box1.svg" />Tra cứu đơn hàng</a></li>
+                            <li><a href=""><img src="../Assets/Images/box5.svg" />Giỏ hàng (0)</a></li>
+                            <li><a href=""><img src="../Assets/Images/box4.svg" />Đăng nhâp</a></li>
+                            <li><a href=""><img src="../Assets/Images/box3.svg" />Yêu thích</a></li>
+                            <li><a href=""><img src="../Assets/Images/box2.svg" />Tìm cửa hàng</a></li>
+                            <li><a href=""><img src="../Assets/Images/box1.svg" />Tra cứu đơn hàng</a></li>
                         </ul>
                     </div>
                 </div>
@@ -37,7 +52,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xl-3">
-                        <a href="/Pages/index.html"><img src="..../Assets/Images/Logo_Ananas_Header.svg" alt=""></a>
+                        <a href="/Pages/index.html"><img src="../Assets/Images/Logo_Ananas_Header.svg" alt=""></a>
                     </div>
                     <div class="col-xl-6">
                         <div class="dropDown">
@@ -46,25 +61,25 @@
                                 <div class="dropdown-menu2">
                                     <a href="">
                                         <div class="category-item">
-                                            <img src="..../Assets/Images/Menu_Nam.jpg">
+                                            <img src="../Assets/Images/Menu_Nam.jpg">
                                             <h3>CHO NAM</h3>
                                         </div>
                                     </a>
                                     <a href="">
                                         <div class="category-item">
-                                            <img src="..../Assets/Images/Menu_Nu.jpg">
+                                            <img src="../Assets/Images/Menu_Nu.jpg">
                                             <h3>CHO NỮ</h3>
                                         </div>
                                     </a>
                                     <a href="">
                                         <div class="category-item">
-                                            <img src="..../Assets/Images/Menu_Sale-off.jpg">
+                                            <img src="../Assets/Images/Menu_Sale-off.jpg">
                                             <h3>SALE OFF</h3>
                                         </div>
                                     </a>
                                     <a href="">
                                         <div class="category-item">
-                                            <img src="..../Assets/Images/Menu_Phu-kien.jpg">
+                                            <img src="../Assets/Images/Menu_Phu-kien.jpg">
                                             <h3>PHỤ KIỆN THỜI TRANG</h3>
                                         </div>
                                     </a>
@@ -210,7 +225,7 @@
                         <div class="vline"></div>
                         <a href="#" class="dropDown">SALE OFF</a>
                         <div class="vline"></div>
-                        <img src="..../Assets/Images/DiscoverYOU.svg" alt="">
+                        <img src="../Assets/Images/DiscoverYOU.svg" alt="">
                     </div>
                     <div class="col-xl-3">
                         <div class="search">
@@ -534,8 +549,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <div class="col-xl-6">
                                     <div class="social-post">
                                         <img src="../Assets/Images/peeping_pattas01-300x160.jpg">
@@ -574,13 +587,13 @@
     <footer>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xl-4">
+                <div class="col-xl-3">
                     <div class="store">
                         <img src="../Assets/Images/Store.svg" alt="">
                         <button class="btn-store">TÌM CỬA HÀNG</button>
                     </div>
                 </div>
-                <div class="col-xl-8">
+                <div class="col-xl-9">
                     <div class="info">
                         <div class="container-fluid">
                             <div class="row">
@@ -633,7 +646,7 @@
                                     <h3>ĐĂNG KÝ NHẬN THÔNG TIN</h3>
                                     <form action="">
                                         <input type="text" placeholder="Email của bạn">
-                                        <button class="btn-store">ĐĂNG KÝ</button>
+                                        <button class="btn-sub">ĐĂNG KÝ</button>
                                     </form>
                                 </div>
                                 <div class="col-xl-5">
