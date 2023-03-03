@@ -518,6 +518,7 @@ header{
 footer{
     background-color: #303030;
     padding: 2%;
+    display: flex;
 }
 
 
@@ -525,6 +526,13 @@ footer .store{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10%;
+}
+
+footer .store img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -542,4 +550,70 @@ footer .store{
 .btn-store:hover{
     background-color: var(--lightgrey);
     color: var(--orange);
+}
+
+
+footer .info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    color: var(--white);
+}
+
+footer ul li{
+    list-style: none;
+    padding: 2%;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+footer ul li a:hover{
+    color: var(--orange);
+}
+
+footer .info h3{
+    font-size: 25px;
+    font-weight: 700;
+    padding: 2%;
+}
+
+footer .info p{
+    padding: 2%;
+}
+
+footer .info p a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+footer .info p a:hover{
+    color: var(--orange);
+}
+
+footer .info p span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+footer ul{
+    padding-left: 0;
+}
+
+footer .row{
+    padding: 2%
+}
+
+footer input{
+    width: 50%;
+    height: 100%;
+    padding: 2%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 700;
 }
