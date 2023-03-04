@@ -67,12 +67,12 @@ var product = [
     id: "A6T016",
     name: "Track 6 Jazico - Low Top",
     price: 1195000,
-    "mainImage": "../Assets/Images/Pro_A6T016_1.jpg",
+    "mainImage": "../Assets/Images/Pro_A6T016_1.jpeg",
     images: [
-      "../Assets/Images/Pro_A6T016_1.jpg",
-      "../Assets/Images/Pro_A6T016_2.jpg",
-      "../Assets/Images/Pro_A6T016_3.jpg",
-      "../Assets/Images/Pro_A6T016_4.jpg",
+      "../Assets/Images/Pro_A6T016_1.jpeg",
+      "../Assets/Images/Pro_A6T016_2.jpeg",
+      "../Assets/Images/Pro_A6T016_3.jpeg",
+      "../Assets/Images/Pro_A6T016_4.jpeg",
     ],
     status: "New Arrival",
   },
@@ -80,12 +80,12 @@ var product = [
     id: "AV00174",
     name: "Vintas Jazico - High Top",
     price: 1190000,
-    "mainImage": "../Assets/Images/Pro_AV00174_1.jpg",
+    "mainImage": "../Assets/Images/Pro_AV00174_1.jpeg",
     images: [
-      "../Assets/Images/Pro_AV00174_1.jpg",
-      "../Assets/Images/Pro_AV00174_2.jpg",
-      "../Assets/Images/Pro_AV00174_3.jpg",
-      "../Assets/Images/Pro_AV00174_4.jpg",
+      "../Assets/Images/Pro_AV00174_1.jpeg",
+      "../Assets/Images/Pro_AV00174_2.jpeg",
+      "../Assets/Images/Pro_AV00174_3.jpeg",
+      "../Assets/Images/Pro_AV00174_4.jpeg",
     ],
     status: "New Arrival",
   },
@@ -93,16 +93,17 @@ var product = [
     id: "AV00173",
     name: "Vintas Jazico - Low Top",
     price: 1190000,
-    mainImage: "../Assets/Images/Pro_AV00173_1.jpg",
+    mainImage: "../Assets/Images/Pro_AV00173_1.jpeg",
     images: [
-      "../Assets/Images/Pro_AV00173_1.jpg",
-      "../Assets/Images/Pro_AV00173_2.jpg",
-      "../Assets/Images/Pro_AV00173_3.jpg",
-      "../Assets/Images/Pro_AV00173_4.jpg",
+      "../Assets/Images/Pro_AV00173_1.jpeg",
+      "../Assets/Images/Pro_AV00173_2.jpeg",
+      "../Assets/Images/Pro_AV00173_3.jpeg",
+      "../Assets/Images/Pro_AV00173_4.jpeg",
     ],
     status: "New Arrival",
   },
 ];
+
 
 function listProduct() {
     var html = "";
@@ -112,18 +113,15 @@ function listProduct() {
               <div class="single-item">
                   <div class="product-img">
                       <img src="${product[i].mainImage}" alt="${product[i].id}">
+                      <button class="btn-muangay">Mua ngay</button>
                       <div class="new-product">
                           <span>${product[i].status}</span>
-                          <div class="hover">
-                              <a href="product-detail.html" class="view-btn">View</a>
-                              <a href="#" class="add-cart">Add to Cart</a>
-                          </div>
                       </div>
                       <div class="product-info">
                           <a href="product-detail.html">
                               <h6>${product[i].name}</h6>
                           </a>
-                          <p>${product[i].price}</p>
+                          <p>${product[i].price} VNĐ</p>
                       </div>
                   </div>
               </div>
@@ -132,5 +130,6 @@ function listProduct() {
     }
     return html;
 }
+
 
 document.getElementById("product-list").innerHTML = listProduct();
