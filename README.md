@@ -33,6 +33,7 @@ Copy the link above and paste it in your programming tool's terminal. The system
 
 ## Copyright
 Copyright © 2022 Ananas. All rights reserved.
+
 Development copyright © 2023 belongs to @tunnienguci
 
 <img src="/website.png">
