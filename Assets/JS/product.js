@@ -1,5 +1,3 @@
-
-
 function dropdownStatus() {
   var x = document.getElementById("status");
   var i = document.getElementById("icons");
@@ -113,7 +111,7 @@ function listProduct() {
               <div class="single-item">
                   <div class="product-img">
                       <img src="${product[i].mainImage}" alt="${product[i].id}">
-                      <button class="btn-muangay">Mua ngay</button>
+                      <a class="btn-muangay" href="/Pages/detail.html?id=${product[i].id}">Mua ngay</a>
                       <div class="new-product">
                           <span>${product[i].status}</span>
                       </div>
@@ -130,6 +128,4 @@ function listProduct() {
     }
     return html;
 }
-
-
 document.getElementById("product-list").innerHTML = listProduct();

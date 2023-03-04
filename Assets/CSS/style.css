@@ -660,8 +660,8 @@ footer input{
     z-index: 999999;
     right: 0;
     margin-top: 50vh;
-    width: 40px;
-    height: 70px;
+    width: 50px;
+    height: 100px;
     background-color: #ff5417;
     border: none;
     display: flex;
@@ -672,6 +672,13 @@ footer input{
     color: var(--white);
     font-weight: 700;
 }
+
+.btn-cart img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
 
 .offcanvas-end{
     width: 300px !important;
