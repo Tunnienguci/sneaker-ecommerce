@@ -683,8 +683,10 @@ footer input{
 .offcanvas-end{
     width: 300px !important;
     height: fit-content;
+    max-height: 40vh;
     right: 40px;
     margin-top: 50vh;
+    overflow: auto;
 }
 
 .offcanvas-end .offcanvas-body{
@@ -726,6 +728,7 @@ footer input{
     font-size: 20px;
     font-weight: 700;
     cursor: pointer;
+    font-family: 'Nutito', sans-serif;
 }
 
 
@@ -757,3 +760,19 @@ body{
         margin-top: 0;
     }
 }
+
+/* Scroll */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--lightgrey);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--orange);
+}
+
+
+/* End */

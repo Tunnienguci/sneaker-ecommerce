@@ -1,5 +1,5 @@
 function detail(id) {
-    window.location.href = "detail.html?id=" + id;
+    window.location.href = "detail.html/p=" + id;
 }
 
 
@@ -14,20 +14,19 @@ function detailProduct(id) {
             // Cắt chuỗi price thành 1.000.000 VNĐ
             var price1 = price.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'); 
             
-
             var html1 = "";
             {product[i].images.map((item) => {
                 html1 += `
                     <div class="multi-img-item">
-                        <img src="${item}" alt="">
+                        <img src="${item}" onclick="${item}">
                     </div>
                 `
-            })
+                })
             }
             html += `
                 <div class="col-xl-6">
                     <div class="detail-img">
-                        <img src="${product[i].mainImage}" alt="">   
+                        <img src="${product[i].mainImage}" id="mainImages">   
                     </div>
                     <div class="multi-img" >
                        
@@ -70,7 +69,7 @@ function detailProduct(id) {
                             </div>
                         </div>
                         <div class="function-cart">
-                            <button class="btn-add">THÊM VÀO GIỎ HÀNG</button>
+                            <button class="btn-add" onclick="addCart()">THÊM VÀO GIỎ HÀNG</button>
                             <button class="btn-luv"><i class="fa-regular fa-heart"></i></button>
                         </div>
                         <button class="btn-payy">THANH TOÁN</button>
@@ -103,5 +102,69 @@ var id = getParameterByName('id');
 detailProduct(id);
 
 
+// ====================================================================
+// Path: Assets\JS\cart.js
+function addCart() {
+    var id = getParameterByName('id');
+    var name = document.getElementById("product-name").innerHTML;
+
+    // Chuyển price từ string sang number để tính toán
+    var price = document.getElementById("product-price").innerHTML;
+    var price1 = price.replace(/[^0-9]/g, '');
+    var price2 = parseInt(price1);
+
+    var cart = JSON.parse(localStorage.getItem("cart"));
+    if (cart == null) {
+        cart = [];
+    }
+    var check = false;
+    for (var i = 0; i < cart.length; i++) {
+        if (cart[i].id == id) {
+            cart[i].quantity++;
+            check = true;
+        }
+    }
+    if (check == false) {
+        var item = {
+            id: id,
+            name: name,
+            price: price2,
+            quantity: 1
+        }
+        cart.push(item);
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Bạn đang có " + cart.length + " sản phẩm trong giỏ hàng");
+    document.getElementsByName("quantity").value = cart.length;
+    location.reload();
+}
 
 
+function removeItem(id) {
+    var cart = JSON.parse(localStorage.getItem("cart"));
+    for (var i = 0; i < cart.length; i++) {
+        if (cart[i].id == id) {
+            cart.splice(i, 1);
+        }
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    showCart();
+}
+
+function totalPrice() {
+    var cart = JSON.parse(localStorage.getItem("cart"));
+    var total = 0;
+    for (var i = 0; i < cart.length; i++) {
+        total += cart[i].quantity * cart[i].price;
+    }
+    return total;
+}
+document.getElementById("total-price").innerHTML = totalPrice().toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') + " VNĐ";
+
+
+
+
+function deleteAll(){
+    localStorage.clear();
+    location.reload();
+}

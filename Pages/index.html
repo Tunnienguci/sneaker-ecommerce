@@ -18,16 +18,45 @@
 
 <body>
     <!-- Card -->
-    <button type="button" class="btn-cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> 0
+    <button type="button" class="btn-cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight" > 
+            <script>
+                var cart = JSON.parse(localStorage.getItem('cart'));
+                var count = 0;
+                for (var i = 0; i < cart.length; i++) {
+                    count += cart[i].quantity;
+                }
+                document.write(count);
+            </script>
         <img src="../Assets/Images/box5.svg" alt="">
     </button>
-    <div class="offcanvas offcanvas-end" tabindex="0" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-body">
-            <h1>GIỎ HÀNG (0)</h1>
+    <div class="offcanvas offcanvas-end" tabindex="0" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"
+        data-bs-dismiss="offcanvas">
+        <div class="offcanvas-body" id="cart">
+            <div class="itemCart">
+                <script>
+                    var cart = JSON.parse(localStorage.getItem('cart'));
+                    var output = '';
+                    for (var i = 0; i < cart.length; i++) {
+                        output += `
+                        <div class="itemCart">
+                            <div class="itemCart-info">
+                                <h4>${cart[i].name}</h4>
+                                <p>Giá: ${cart[i].price}</p>
+                                <p>Số Lượng: ${cart[i].quantity}</p>
+                            </div>
+                        </div>
+                        `;
+                    }
+                    document.getElementById('cart').innerHTML = output;
+                </script>
+            </div>
             <hr>
-            <p>Tổng Cộng:   <span>0đ</span></p> 
+            <div class="total">
+                <h4>Tổng tiền: <span id="total-price"></span></h4>
+            </div>
             <button class="btn-pay">THANH TOÁN</button>
-            <button class="btn-love">THÊM VÀO YÊU THÍCH</button>
+            <button class="btn-love" onclick="deleteAll()">XÓA TOÀN BỘ</button>
         </div>
     </div>
 
@@ -59,13 +88,13 @@
                             <a href="../Pages/product.html">SẢN PHẨM <i class="fa-solid fa-chevron-down"></i></a>
                             <div class="dropdown-menu">
                                 <div class="dropdown-menu2">
-                                    <a href="">
+                                    <a href="../Pages/product.html">
                                         <div class="category-item">
                                             <img src="../Assets/Images/Menu_Nam.jpg">
                                             <h3>CHO NAM</h3>
                                         </div>
                                     </a>
-                                    <a href="">
+                                    <a href="../Pages/product.html">
                                         <div class="category-item">
                                             <img src="../Assets/Images/Menu_Nu.jpg">
                                             <h3>CHO NỮ</h3>
@@ -90,7 +119,7 @@
                         </div>
                         <div class="vline"></div>
                         <div class="dropDown">
-                            <a href="#">NAM <i class="fa-solid fa-chevron-down"></i></a>
+                            <a href="../Pages/product.html">NAM <i class="fa-solid fa-chevron-down"></i></a>
                             <div class="dropdown-menu">
                                 <div class="dropdown-menu3">
                                     <a href="">
@@ -157,7 +186,7 @@
                         </div>
                         <div class="vline"></div>
                         <div class="dropDown">
-                            <a href="#">NỮ <i class="fa-solid fa-chevron-down"></i></a>
+                            <a href="../Pages/product.html">NỮ <i class="fa-solid fa-chevron-down"></i></a>
                             <div class="dropdown-menu">
                                 <div class="dropdown-menu3">
                                     <a href="">

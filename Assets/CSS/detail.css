@@ -133,9 +133,18 @@
 .multi-img-item{
     width: 24%;
     height: 24%;
+    cursor: pointer;
 }
 
 .multi-img-item img{
     width: 100%;
     height: 100%;
+}
+
+.btn-del{
+    width: 10%;
+    height: 10%;
+    background-color: var(--dark);
+    color: var(--white);
+    border: 0;
 }
