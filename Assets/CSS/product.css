@@ -1,0 +1,137 @@
+.product-group{
+    padding: 2%;
+}
+
+.filter-top{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.filter-top a{
+    text-decoration: none;
+    color: var(--grey);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.hr-2x{
+    width: 100%;
+    height: 2px;
+    background-color: var(--dark);
+    margin: 3% 0;
+}
+
+.filter-top-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-top-group a{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    padding: 2%;
+    color: var(--grey);
+    text-decoration: none;
+    justify-content: center;
+}
+
+.filter-top-group a:hover{
+    background-color: var(--lightgrey);
+}
+
+/* OffCanvas */
+.filter-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2%;
+    border-bottom: 4px dotted var(--lightgrey);
+    height: fit-content;
+}
+
+.filter-center a{
+    font-family: 'Nunito', sans-serif;
+    color: var(--grey);
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 2%;
+    text-decoration: none;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.filter-center ul{
+    list-style: none;
+    padding: 1%;
+    /* height: 100%; */
+}
+
+.filter-center ul li{
+    padding: 2%;
+    margin: 1%;
+    font-size: 1rem;
+    color: var(--grey);
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+}
+
+.filter-center ul li:hover{
+    background-color: var(--lightgrey);
+}
+
+.productList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+}
+
+.single-product img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.single-product{
+    width: 30%;
+    height: 100%;
+    margin: 1%;
+    border: 1px solid var(--lightgrey);
+    border-radius: 5px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.single-product:hover{
+    box-shadow: 0 0 10px 0 var(--lightgrey);
+}
+
+.product-name{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--grey);
+    text-align: center;
+}
+
+.product-price{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--grey);
+    text-align: center;
+}

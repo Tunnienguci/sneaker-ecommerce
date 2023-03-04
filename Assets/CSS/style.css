@@ -1,5 +1,5 @@
 
-  /* @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap'); */
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap');
 
 :root{
     --orange: #ff5417;
@@ -19,6 +19,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: 'URW Geometric Medium', sans-serif;
+    
 }
 
 header{
@@ -63,6 +64,7 @@ header{
     text-decoration: none;
     color: var(--white);
     font-size: 14px;
+    font-family: 'Nunito', sans-serif;
 }
 
 .toolbar ul li a:hover{
@@ -231,21 +233,24 @@ header{
 
 
 /* Category */
-.category-item-1 ul li{
-    list-style: none;
-    padding: 5px 0;
+.category-item-1 h5{
+    font-family: 'Nunito', sans-serif;
 }
 
 .category-item-1 ul li{
+    list-style: none;
+    padding: 5px 0;
     text-decoration: none;
     color: var(--lightgrey);
     font-size: 15px;
     font-weight: 400;
+    font-family: 'Nunito', sans-serif;
 }
 
 .category-item-1 ul li b{
     font-weight: 600;
     font-size: 20px;
+    font-family: 'Nunito', sans-serif;
 }
 
 .category-item-1 ul li:hover{
@@ -597,6 +602,7 @@ footer ul li{
 footer ul li a{
     text-decoration: none;
     color: var(--white);
+    font-family: 'Nunito', sans-serif;
 }
 
 footer ul li a:hover{
@@ -604,6 +610,7 @@ footer ul li a:hover{
 }
 
 footer .info h3{
+    font-family: 'Nunito', sans-serif;
     font-size: 25px;
     font-weight: 700;
     padding: 2%;
@@ -679,10 +686,15 @@ footer input{
     align-content: space-between;
 }
 
+.offcanvas-body p{
+    font-family: 'Nunito', sans-serif;
+}
+
 .offcanvas-body h1{
     font-size: 20px;
     font-weight: 700;
     color: var(--dark);
+    font-family: 'Nunito', sans-serif;
 }
 
 .btn-pay{
@@ -707,4 +719,34 @@ footer input{
     font-size: 20px;
     font-weight: 700;
     cursor: pointer;
+}
+
+
+/* Webkkit */
+body{
+    -moz-user-select: none !important;
+    -webkit-touch-callout: none!important;
+    -webkit-user-select: none!important;
+    -khtml-user-select: none!important;
+    -moz-user-select: none!important;
+    -ms-user-select: none!important;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .social-content .col-xl-6 .social-post{
+        margin-top: 0;
+    }
+}
+    
+@media screen and (max-width: 576px) {
+    .social-content .col-xl-6 .social-post{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .social-content .col-xl-6 .social-post{
+        margin-top: 0;
+    }
 }
