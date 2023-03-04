@@ -406,7 +406,7 @@ header{
 }
 
 .category .bg-giaynam{
-    background: url(/Assets/Images/catalogy-1.jpg);
+    background: url(../../Assets/Images/catalogy-1.jpg);
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -414,7 +414,7 @@ header{
     background-repeat: no-repeat;
 }
 .category .bg-giaynu{
-    background: url(/Assets/Images/catalogy-2.jpg);
+    background: url(../../Assets/Images/catalogy-2.jpg);
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -422,7 +422,7 @@ header{
     background-repeat: no-repeat;
 }
 .category .bg-sanpham{
-    background: url(/Assets/Images/catalogy-3.jpg);
+    background: url(../../Assets/Images/catalogy-3.jpg);
     height: 100%;
     width: 100%;
     background-size: cover;
