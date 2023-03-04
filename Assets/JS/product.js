@@ -111,7 +111,7 @@ function listProduct() {
               <div class="single-item">
                   <div class="product-img">
                       <img src="${product[i].mainImage}" alt="${product[i].id}">
-                      <a class="btn-muangay" href="/Pages/detail.html?id=${product[i].id}">Mua ngay</a>
+                      <a class="btn-muangay" href="../Pages/detail.html?id=${product[i].id}">Mua ngay</a>
                       <div class="new-product">
                           <span>${product[i].status}</span>
                       </div>
