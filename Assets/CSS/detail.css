@@ -28,11 +28,10 @@
 
 .line-dotted{
     border-bottom: 4px dotted var(--lightgrey);
-    margin: 0 2% 0;
 }
 
 .detail-info h1{
-    padding: 2%;
+    padding: 2% 0;
     font-weight: 600;
     font-size: 1.8rem;
 }
@@ -42,7 +41,7 @@
 }
 
 .detail-info p{
-    padding: 2%;
+    padding: 2% 0;
     font-size: 1.2rem;
     font-weight: 400;
     color: var(--dark);
@@ -53,7 +52,7 @@
 }
 
 .detail-info h3{
-    padding: 2%;
+    padding: 2% 0;
     font-weight: 600;
     font-size: 1.8rem;
     color: var(--orange);
@@ -62,7 +61,7 @@
 .select-detail{
     display: flex;
     justify-content: space-between;
-    padding: 2%;
+    margin: 5% 0;
     flex-direction: row;
 }
 
@@ -84,7 +83,7 @@
 }
 
 .function-cart{
-    padding: 2%;
+    margin-bottom: 2%;
 }
 
 .btn-add{
@@ -105,7 +104,7 @@
     border: 0;
     font-weight: 600;
     font-size: 1.4rem;
-    margin: 0 2% 0 0;
+    margin: 0 0 0 2%;
     padding: 3%;
 }
 
@@ -120,7 +119,6 @@
     color: var(--white);
     font-size: 1.4rem;
     border: 0;
-    margin-left: 2%;
 }
 
 .multi-img{
