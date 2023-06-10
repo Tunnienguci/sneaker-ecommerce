@@ -744,20 +744,48 @@ body{
 
 /* Responsive */
 @media screen and (max-width: 768px) {
+    .social-content{
+        margin: 0;
+    }
+
     .social-content .col-xl-6 .social-post{
-        margin-top: 0;
+        margin-top: 5% 0;
+    }
+
+    .toolbar .col-xl-12{
+        display: none;
+    }
+    
+    .category .col-xl-4{
+        margin: 2% 0;
+    }
+
+    .navbar .col-xl-6{
+        display: none;
+    }
+
+    .navbar .col-xl-3{
+        margin: 2% 0;
+    }
+
+    footer .col-xl-4{
+        display: none;
+    }
+
+    .col-xl-5>img{
+
     }
 }
     
 @media screen and (max-width: 576px) {
     .social-content .col-xl-6 .social-post{
-        margin-top: 0;
+        margin-top: 5% 0;
     }
 }
 
 @media screen and (max-width: 425px) {
     .social-content .col-xl-6 .social-post{
-        margin-top: 0;
+        margin-top: 5% 0;
     }
 }
 
